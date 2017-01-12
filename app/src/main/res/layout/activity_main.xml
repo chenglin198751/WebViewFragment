@@ -5,39 +5,22 @@
     android:background="@android:color/white"
     android:orientation="vertical">
 
-    <RelativeLayout
+    <EditText
+        android:id="@+id/edit_text"
         android:layout_width="match_parent"
-        android:layout_height="40dip"
-        android:paddingLeft="15dip"
-        android:paddingRight="15dip">
+        android:layout_height="50dip"
+        android:shadowColor="@android:color/black"
+        android:text="http://3g.qq.com"
+        android:textSize="18dip" />
 
-        <TextView
-            android:id="@+id/left_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:text="驻马店"
-            android:textColor="@android:color/black"
-            android:textSize="16dip" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="40dip"
-            android:layout_height="40dip"
-            android:layout_centerInParent="true" />
-
-        <TextView
-            android:id="@+id/right_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:text="北京"
-            android:textColor="@android:color/black"
-            android:textSize="16dip" />
-
-    </RelativeLayout>
-
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dip"
+        android:shadowColor="@android:color/black"
+        android:text="点击跳转"
+        android:textSize="16dip" />
 
 </LinearLayout>

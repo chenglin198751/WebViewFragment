@@ -54,7 +54,7 @@ public class WebFragment extends Fragment {
         mWebView.setWebChromeClient(new MyWebChromeClient());
         mWebView.setWebViewClient(new MyWebViewClient());
 
-        mUrl = getArguments().getString("url");
+        mUrl = getArguments().getString(WebActivity.URL);
         mWebView.loadUrl(mUrl);
     }
 
@@ -68,9 +68,11 @@ public class WebFragment extends Fragment {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
             Log.v("tag_2", "url = " + url);
+
+            //第一次附加在Activity 上时只加载一次
             if (mWebViewLoadImpl != null && !mWebViewLoadImpl.isActFirstCreate()) {
                 mWebViewLoadImpl.shouldOverrideUrlLoading(view, url);
-                Log.v("tag_2", "22222 ");
+                Log.v("tag_2", "拦截了 ");
                 return true;
             }
             return super.shouldOverrideUrlLoading(view, url);

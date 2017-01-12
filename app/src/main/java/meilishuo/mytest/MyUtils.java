@@ -24,14 +24,4 @@ public class MyUtils {
         return "";
     }
 
-    public static void Mls2Url(final Activity activity, final String url) {
-        if (url.startsWith("mls://")){
-
-        }else {
-            Intent intent = new Intent(activity,WebActivity.class);
-            intent.putExtra("url",url);
-            activity.startActivity(intent);
-        }
-
-    }
 }

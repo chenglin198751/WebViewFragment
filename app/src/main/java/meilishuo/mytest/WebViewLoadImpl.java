@@ -8,5 +8,8 @@ import android.webkit.WebView;
 public interface WebViewLoadImpl {
     void shouldOverrideUrlLoading(WebView view, String url);
 
+    /**
+     * 判断Activity第一次被初始化
+     */
     boolean isActFirstCreate();
 }
